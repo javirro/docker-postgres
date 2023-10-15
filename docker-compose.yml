@@ -13,7 +13,8 @@ services:
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=root
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./postgres_data:/var/lib/postgresql/data
 
   pdadmin:
     image: dpage/pgadmin4
