@@ -34,3 +34,10 @@ docker-compose up
 ```
 
 For the first time that you run it, it is normal that it spends some time downloading all the information related to the images used to build the containers.
+
+### CONSIDERATIONS
+
+After creating both containers:
+
+- To access  pgadmin page you must search on google: **localhost:port** (in this case, as we used port 80, using localhost is enough).
+- Once you have login inside pgadmin. To stablish connection with the database created, in the field host, you must write **postgres** instead of localhost because although the container is running in localhost, the application is inside the postgres container.
