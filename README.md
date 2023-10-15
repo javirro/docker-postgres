@@ -16,6 +16,7 @@ For the case of postgres services, the configuration used is the following:
 - **restart:** It means that in case of failure, the container must restart again.
 - **ports:** Indicate the port binding from the external port to the internal port. In this case we use the normal port for this cases: 5432
 - **environment:** Defines the environment variables and its values which are needed to run the container.
+- **volumes:** Indicates the path inside the container where we are going to store the db data. It means that while we don´t remove the container, the info will be always accesible.
 
 
 For the case of pgadmin services, the configuration used is the following:
