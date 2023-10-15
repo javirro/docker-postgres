@@ -24,3 +24,13 @@ For the case of pgadmin services, the configuration used is the following:
 - **ports:** Indicate the port binding from the external port to the internal port. In this case we use port 80.
 - **environment:** Defines the environment variables and its values which are needed to run the container. In this case, the email and password could be invented. But it is the one which must be used to login in pdadmin web.
 - **depends_on:** Indicate that the pgadmin service depends on the postgres services. For that reason, postgres will start before than pgadmin.
+
+## RUN containers
+
+Open a terminal in the same directory where docker-compose.yml file is and run the following command.
+
+```
+docker-compose up
+```
+
+For the first time that you run it, it is normal that it spends some time downloading all the information related to the images used to build the containers.
