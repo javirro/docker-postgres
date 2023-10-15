@@ -14,6 +14,7 @@ services:
       - POSTGRES_DB=root
     volumes:
       - postgres_data:/var/lib/postgresql/data
+
   pdadmin:
     image: dpage/pgadmin4
     environment:
@@ -23,5 +24,6 @@ services:
       - "80:80"
     depends_on:
       - postgres
+
 volumes:
   postgres_data:
